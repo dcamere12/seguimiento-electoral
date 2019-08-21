@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Seguimiento electoral - Demanda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="demand.html">Realizar demanda</a></li>
+                    <li><a href="top.html">Top 5</a></li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="demand">
+                   <h2 class="demand__title">Nueva demanda:</h2>
+                   <form class="form">
+                       <label for="subject">
+                           Asunto:
+                           <input type="text" id="subject">
+                       </label>
+                       <label for="place">
+                            Lugar donde ocurrió:
+                            <input type="text" id="place">
+                        </label>
+                        <label for="brokenlaw">
+                            Posible norma transgredida:
+                            <input type="text" id="brokenlaw">
+                        </label>
+                       <label for="demanded">Demandado:</label>
+                       <select name="demanded" id="demanded">
+                           <option value=""></option>
+                           <option value="0">Diego Camere</option>
+                           <option value="1">Silvia Granados</option>
+                           <option value="2">Jorge Winter</option>
+                       </select>
+                       <label for="attached">
+                            Adjunto:
+                            <input type="file" id="attached">
+                        </label>
+                        <label for="details">Detalles extra:</label>
+                        <textarea name="details" id="details" cols="30" rows="10"></textarea>
+
+                        <button>Enviar denuncia</button>
+                   </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Seguimiento electoral - Registro</title>
+        <title>Seguimiento electoral - Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
@@ -16,7 +16,8 @@
                 </ul>
             </header>
             <main class="main">
-                <div class="main-register">
+                <div class="dashboard">
+                    <h3>Editar mi cuenta</h3>
                     <form class="form">
                         <label for="name">
                             Nombres:
@@ -30,20 +31,35 @@
                             DNI:
                             <input type="text" id="dni">
                         </label>
-                        <label for="user">
-                            Usuario:
-                            <input type="text" id="user">
-                        </label>
-                        <label for="password">
-                            Password:
-                            <input type="password" id="password">
-                        </label>
                         <label for="birthdate">
                             Fecha de nacimiento:
                             <input type="date" id="birthdate">
                         </label>
-                        <button>Registrar</button>
+                        <button>Editar datos</button>
                     </form>
+                </div>
+                <div class="dashboard">
+                    <h3>Mis demandas:</h3>
+                    <div class="dashboard__demands">
+                        <ul>
+                            <li>
+                                <div class="image"></div>
+                                <div class="info">
+                                    <span>Denuncia 1</span>
+                                    <span>Fecha: 12-10-2019</span>
+                                    <span>Estado: En revisión</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image"></div>
+                                <div class="info">
+                                    <span>Denuncia 2</span>
+                                    <span>Fecha: 12-10-2019</span>
+                                    <span>Estado: Aprobada</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </main>
         </div>

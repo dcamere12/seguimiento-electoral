@@ -175,3 +175,92 @@ table {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* DEMAND CSS */
+
+.demand {
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+.demand__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.demand textarea {
+    margin: 10px 0;
+    resize: none;
+    width: 100%;
+}
+
+.demand select {
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* DASHBOARD CSS */
+
+.dashboard {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.dashboard h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: lightgray;
+    margin: 10px;
+    width: 50%;
+}
+
+.dashboard__demands ul li {
+    padding: 30px 20px;
+    border-bottom: 1px black solid;
+    overflow: hidden;
+}
+
+
+.dashboard__demands ul li:last-child {
+    border-bottom: none;
+}
+
+.dashboard__demands ul li .image {
+    background-image: url('../img/person-placeholder.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35%;
+    height: 100px;
+    float: left;
+}
+
+.dashboard__demands ul li .info {
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 16px;
+    width: 65%;
+    height: 100px;
+    float: left;
+}
+
+.dashboard__demands ul li .info h3 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dashboard__demands ul li .info span {
+    display: block;
+    margin-bottom: 10px;
+}
