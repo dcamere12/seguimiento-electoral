@@ -1,0 +1,42 @@
+extends layout
+
+block vars
+    - title = "Seguimiento Electoral - Registro";
+    - section = "register";
+
+block head
+    link(rel="stylesheet" href="styles/register.css")
+
+block content
+    .wrap
+        .content
+            .register
+                h2.title Completa tus datos personales
+                form
+                    .form__row
+                        label(for="dni") DNI
+                        .input
+                            input(type="text" id="dni" maxlength="8")
+
+                        button.btn.btn--search Buscar
+                    .form__row
+                        label(for="nombres") Nombres
+                        .input
+                            input(type="text" id="nombres")
+                    .form__row
+                        label(for="apellidos") Apellidos
+                        .input
+                            input(type="text" id="apellidos")
+                    .form__row
+                        label(for="correo") Correo
+                        .input
+                            input(type="email" id="correo")
+                    .form__row
+                        label(for="domicilio") Domicilio
+                        .input
+                            input(type="text" id="domicilio")
+                button.btn Siguiente
+
+
+block scripts
+    //script(src="scripts/register.js")

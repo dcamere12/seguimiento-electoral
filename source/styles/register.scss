@@ -1,0 +1,55 @@
+@import 'base/variables';
+@import 'mixins/utils';
+@import 'mixins/responsive';
+
+body {
+    background-color: $background-gray;
+}
+
+.register {
+    margin-top: 30px;
+    padding: 30px 10%;
+    background-color: white;
+    @include clearfix;
+    text-align: center;
+
+    .title {
+        margin-bottom: 48px;
+        text-align: left;
+    }
+
+    .input {
+        display: inline-block;
+        width: 100%;
+        padding-right: 10%;
+    }
+
+    label {
+        display: block;
+    }
+
+    .btn {
+        display: inline-block;
+    }
+
+    form {
+        text-align: left;
+    }
+
+    .form__row {
+        float: left;
+        width: 50%;
+        margin-bottom: 52px;
+
+        &:first-child {
+            display: block;
+            width: 100%;
+            margin-bottom: 52px;
+
+            .input {
+                width: 50%;
+                padding-right: 5%;
+            }
+        }
+    }
+}

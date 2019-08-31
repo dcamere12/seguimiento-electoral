@@ -3,7 +3,7 @@
 
 var test = (function () {
     var render = function () {
-           
+        // code here
     };
 
     var init = function () {
@@ -18,5 +18,5 @@ var test = (function () {
 }());
 
 $(document).ready(function () {
-    cards.init();
+    test.init();
 });

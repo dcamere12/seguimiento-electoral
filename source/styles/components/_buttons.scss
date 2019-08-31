@@ -8,4 +8,25 @@
     font-family: $font-gilroy;
     color: white;
     cursor: pointer;
+    position: relative;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &--search {
+        background-color: $gray7;
+        color: black;
+        padding: 10px 40px 10px 23px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            height: 16px;
+            width: 16px;
+            background-image: url('../../images/lupa.svg');
+        }
+    }
 }

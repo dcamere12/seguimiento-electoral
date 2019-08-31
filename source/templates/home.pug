@@ -8,30 +8,31 @@ block head
     link(rel="stylesheet" href="styles/home.css")
 
 block content
-    .home
-        .wrap
-            .home__left
-                img(src="images/iconlogo.png", alt="")
-                img(src="images/logo.png", alt="")
-                p Acerca del aplicativo ... Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso.
+    .wrap
+        .home
+            .content
+                .home__left
+                    img(src="images/iconlogo.png", alt="")
+                    img(src="images/logo.png", alt="")
+                    p Acerca del aplicativo ... Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso.
 
-            .home__right
-                form.home__form
-                    h3.home__form__title Iniciar Sesión
-                    .inputs
-                        .input.input--user
-                            input(type="text" placeholder="Ingresa tu usuario")
-                        .input.input--password
-                            input.input--password(type="password" placeholder="Ingresa tu contraseña")
-                    button.btn Ingresar
-                    a.home__form__forgot ¿Olvidaste  tu contraseña?
-                    span o
-                    .home__form__facebook
-                        a(href="#")
-                            img(src="images/facebook.svg", alt="")
-                    .home__form__google
-                        a(href="#")
-                            img(src="images/google.svg", alt="")
+                .home__right
+                    form.home__form
+                        h3.home__form__title Iniciar Sesión
+                        .inputs
+                            .input.input--user
+                                input(type="text" placeholder="Ingresa tu usuario")
+                            .input.input--password
+                                input.input--password(type="password" placeholder="Ingresa tu contraseña")
+                        button.btn Ingresar
+                        a.home__form__forgot ¿Olvidaste  tu contraseña?
+                        span o
+                        .home__form__facebook
+                            a(href="#")
+                                img(src="images/facebook.svg", alt="")
+                        .home__form__google
+                            a(href="#")
+                                img(src="images/google.svg", alt="")
 
 block scripts
-    script(src="scripts/home.js")
+    //script(src="scripts/home.js")
