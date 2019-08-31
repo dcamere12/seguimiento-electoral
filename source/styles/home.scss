@@ -1,0 +1,12 @@
+@import 'base/variables';
+@import 'mixins/utils';
+@import 'mixins/responsive';
+
+
+/// define block name
+$block: '.home';
+
+/// declare styles
+#{ $block } {
+
+}

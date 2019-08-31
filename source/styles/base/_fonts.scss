@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500');
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/gilroy-light-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/gilroy-regular-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/gilroy-medium-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/gilroy-bold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iconse';
+    src:
+      url('../fonts/iconse.ttf?etmj6f') format('truetype'),
+      url('../fonts/iconse.woff?etmj6f') format('woff'),
+      url('../fonts/iconse.svg?etmj6f#iconse') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="lq-icon-"], [class*=" lq-icon-"] {
+    font-family: 'iconse' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.lq-icon-horario:before {
+    content: "\e91b";
+}
+
+.lq-icon-mondero:before {
+    content: "\e91c";
+}
+
+.lq-icon-monedas:before {
+    content: "\e91d";
+}
+
+.lq-icon-zoom-in:before {
+    content: "\e919";
+}
+
+.lq-icon-zoom-out:before {
+    content: "\e91a";
+}
+
+.lq-icon-delivery-express:before {
+    content: "\e916";
+}
+  .lq-icon-recojo-tienda:before {
+    content: "\e917";
+}
+  .lq-icon-zona-despacho:before {
+    content: "\e918";
+}
+
+.lq-icon-alerta:before {
+    content: "\e915";
+}
+
+.lq-icon-tarjeta-oh:before {
+    content: "\e914";
+}
+
+.lq-icon-tarjeta_oh:before {
+    content: "\e90c";
+}
+
+.lq-icon-historial:before {
+    content: "\e911";
+}
+
+.lq-icon-lista:before {
+    content: "\e912";
+}
+
+.lq-icon-salir:before {
+    content: "\e913";
+}
+
+.lq-icon-user:before {
+    content: "\e90a";
+}
+
+.lq-icon-ubicacion:before {
+    content: "\e90b";
+}
+
+.lq-icon-ofertas:before {
+    content: "\e90d";
+}
+
+.lq-icon-electro:before {
+    content: "\e90e";
+}
+
+.lq-icon-supermercado:before {
+    content: "\e90f";
+}
+
+.lq-icon-cerrar:before {
+    content: "\e910";
+}
+
+.lq-icon-arrow-down:before {
+    content: "\e900";
+}
+
+.lq-icon-arrow-large-right:before {
+    content: "\e901";
+}
+
+.lq-icon-arrow-right:before {
+    content: "\e902";
+}
+
+.lq-icon-check-small:before {
+    content: "\e903";
+}
+
+.lq-icon-check:before {
+    content: "\e904";
+}
+
+.lq-icon-close:before {
+    content: "\e905";
+}
+
+.lq-icon-facebook:before {
+    content: "\e906";
+}
+
+.lq-icon-instagram:before {
+    content: "\e907";
+}
+
+.lq-icon-twitter:before {
+    content: "\e908";
+}
+
+.lq-icon-youtube:before {
+    content: "\e909";
+}

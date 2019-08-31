@@ -1,0 +1,405 @@
+mixin lq-spinner(min, max, value, increment = 1, tooltip = '', options = {})
+    if increment == ''
+        - var increment = 1
+
+    .spinner-group
+        if tooltip
+            if options['order']
+                a.lq-link.lq-link__arrow Especifica tu pedido
+            .toolnumber(data-measure=options['weighttype'])
+                p.lq-peso.toolnumber__lq-peso(data-value=options['weight'])=options['weight']+ ' '+options['weighttype']
+                span.lq-icon-arrow-large-right
+                p.lq-precio.toolnumber__lq-precio(data-value=options['price'])='S/'+options['price']
+        else
+            .toolnumber-empty
+        .lq-spinner
+            button.lq-btn__left
+                span.lq-btn__text -
+            input(type="number" value=value data-min=min data-max=max data-increment=increment)
+            button.lq-btn__right.lq-color-active
+                span.lq-btn__text +
+
+mixin lq-card(name, resume, brand, price, image, options = {})
+    .lq-card
+
+        if options['promotext']
+            - var promotext = options['promotext']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var display = 'lq-card__promo'
+            - var promotext = ''
+
+        if options['promocolor']
+            - var promocolor = options['promocolor']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var promocolor = '#213AF8'
+
+        if options['spinnerinc']
+            - var increment = options['spinnerinc']
+        else
+            - var increment = 1
+
+        div(class='lq-card__promo' + ' ' + display style='background-color:' + promocolor)=promotext
+
+        .lq-card__imagearea
+            if image
+                a.lq-card__photo(href="#" title=name style="background-image: url("+image+")") &nbsp;
+
+            if options['warning']
+                .lq-card__warning
+                    | tomar bebidas alcohólicas en exceso es dañino
+
+        .lq-card__info
+            // info
+            a.lq-card__name(href="" title=name)= name
+            p.lq-card__resume=resume
+            p.lq-card__brand=brand
+            if options['tooltip']
+                p.lq-card__extra Precio x kg
+
+            // prices
+            .lq-card__prices
+                if options['discount-value']
+                    p.lq-card__price='S/'+price
+                p.lq-card__discount
+                    sub S/
+                    if options['discount-value']
+                        span.lq-card__discount-value=options['discount-value']
+                    else
+                        span.lq-card__discount-value=price
+                    if options['discount-percent']
+                        span.lq-card__discount-percent=options['discount-percent']
+                if options['oh-value']
+                    p.lq-card__oh
+                        sub S/
+                        span.lq-card__oh-value=options['oh-value']
+                        span.lq-card__oh-percent=options['oh-percent']
+                    p.lq-card__exclusive
+                        span.lq-icon-tarjeta-oh
+                        | Dcto. exclusivo
+        .lq-card__fixedbottom
+            // quantity
+            +lq-spinner('1', '10', '1', increment, options['tooltip'], { 'weight': options['weight'], 'price': options['price'], 'weighttype': options['weighttype'], 'order': true })
+
+            // actions
+            .lq-card__actions
+                .lq-card__actions-save
+                    a.lq-link.lq-link__add-to-list Guardar en lista
+                .lq-card__actions-add
+                    button.lq-button.lq-card__addcart
+                        span Agregar
+
+        .lq-card__message
+            p.lq-card__message-text &nbsp;
+
+mixin lq-card--nostock(name, resume, brand, image, options = {})
+    .lq-card.lq-card--nostock
+
+        if options['promotext']
+            - var promotext = options['promotext']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var display = 'lq-card__promo'
+            - var promotext = ''
+
+        if options['promocolor']
+            - var promocolor = options['promocolor']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var promocolor = '#213AF8'
+
+        div(class='lq-card__promo' + ' ' + display style='background-color:' + promocolor)=promotext
+
+        .lq-card__imagearea
+            if image
+                a.lq-card__photo(href="#" title=name style="background-image: url("+image+")") &nbsp;
+
+            if options['warning']
+                .lq-card__warning
+                    | tomar bebidas alcohólicas en exceso es dañino
+        .lq-card__info
+            // info
+            a.lq-card__name(href="" title=name)= name
+            p.lq-card__resume=resume
+            p.lq-card__brand=brand
+
+            .lq-card__prices &nbsp;
+        .lq-card__fixedbottom
+            .lq-card__actions
+                .lq-card__actions-save
+                    a.lq-link.lq-link__add-to-list Guardar en lista
+                .lq-card__actions-add
+                    .lq-card__nostock
+                        span.lq-icon-alerta
+                        p Sin stock
+                .lq-card__bottom__mail
+                    p Avísame cuando esté disponible:
+                    .lq-input-email
+                        +lq-input-email()
+
+        .lq-card__message
+            p.lq-card__message-text &nbsp;
+
+mixin lq-card-accompaniment(name, resume, brand, price, options = {})
+    .lq-card.lq-card--accompaniment
+        if options['promotext']
+            - var promotext = options['promotext']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var display = 'lq-card__promo'
+            - var promotext = ''
+
+        if options['promocolor']
+            - var promocolor = options['promocolor']
+            - var display = 'lq-card__promo--visible'
+        else
+            - var promocolor = '#213AF8'
+
+        if options['spinnerinc']
+            - var increment = options['spinnerinc']
+        else
+            - var increment = 1
+
+        div(class='lq-card__promo'+ ' ' + display style='background-color:' + promocolor)=promotext
+
+        .lq-card__imagearea
+            if options['image']
+                a.lq-card__photo(href="#" title=name style="background-image: url('" + options['image'] + "')") &nbsp;
+
+            if options['warning']
+                .lq-card__warning
+                    | tomar bebidas alcohólicas en exceso es dañino
+        .lq-card__info
+            // info
+            a.lq-card__name(href="" title=name)= name
+            p.lq-card__resume=resume
+            p.lq-card__brand=brand
+
+            // prices
+            .lq-card__prices
+                if options['discount-value']
+                    p.lq-card__price='S/'+price
+                p.lq-card__discount
+                    sub S/
+                    if options['discount-value']
+                        span.lq-card__discount-value=options['discount-value']
+                    else
+                        span.lq-card__discount-value=price
+                    if options['discount-percent']
+                        span.lq-card__discount-percent=options['discount-percent']
+                if options['oh-value']
+                    p.lq-card__oh
+                        sub S/
+                        span.lq-card__oh-value=options['oh-value']
+                        span.lq-card__oh-percent=options['oh-percent']
+                    p.lq-card__exclusive
+                        span.lq-icon-tarjeta-oh
+                        | Dcto. exclusivo
+        .lq-card__fixedbottom
+            if options['hidespinner']
+                //
+            else
+                +lq-spinner('1', '10', '1', increment, options['tooltip'], { 'weight': options['weight'], 'price': options['price'] })
+            if options['secondarybutton']
+                // actions
+                .lq-card__actions
+                    .lq-card__actions-add
+                        a(href="#" title="").lq-button.issecondary
+                            span MÁS DETALLES
+            else
+                // actions
+                .lq-card__actions
+                    .lq-card__actions-add
+                        button.lq-button.lq-card__addcart
+                            span Agregar
+
+        .lq-card__message
+            p.lq-card__message-text &nbsp;
+
+mixin lq-switch(name, a, b)
+    .lq-switch
+        div.lq-switch-active
+            input(type="radio" name=name value=a checked)
+            span=a
+        div
+            input(type="radio" name=name value=b)
+            span=b
+
+mixin lq-checkbox(name, value = '', label = '', options = {checked: false, disabled: false, extra: '', datakey: ''})
+    label.lq-checkbox(data-key=(options['datakey']) ? options.datakey : '')
+        input(type='checkbox', id=id, name=name, value=value, checked=options.checked, disabled=options.disabled)
+        span=label
+            if (options.extra)
+                em='(' + options.extra +')'
+        .check
+
+mixin lq-radio(name, value = '', label = '', options = {checked: false, disabled: false, extra: ''})
+    label.lq-radio
+        input.lq-radio__input(type="radio", name=name, value=value, checked=options.checked, disabled=options.disabled)
+        span=label
+            if (options.extra)
+                em='(' + options.extra +')'
+        .check
+
+mixin lq-featured(title, category, subcategories = [], image)
+    .lq-featured(class=category)
+        .lq-featured__info
+            a.lq-featured__title(href="#" title=title)=title
+
+            ul.lq-featured__list
+                each subcategory in subcategories
+                    li.lq-featured__item
+                        a.lq-featured__link(href="#" title=subcategory)=subcategory
+                li.lq-featured__item
+                    a.lq-link.lq-link__arrow(href="#" title=title) VER TODOS
+
+        a.lq-featured__photo(href="#" title=product, style="background-image: url('" + image + "');") &nbsp;
+
+mixin lq-featured-small(title, category, image)
+    .lq-featured(class=category)
+        .lq-featured__info
+            a.lq-featured__title(href="#" title=title)=title
+        a.lq-featured__photo(href="#" title=product, style="background-image: url('" + image + "');") &nbsp;
+
+mixin lq-category-block(title, category, image)
+    .lq-category-block(class=category)
+        .lq-category-block__info
+            a.lq-category-block__title(href="#" title=title)=title
+
+        a.lq-category-block__photo(href="#" title=title style="background-image: url('" + image + "');") &nbsp;
+
+mixin lq-offer-online()
+    .lq-offer.lq-offer--online
+        .lq-offer__info
+            a.lq-offer__title(href="#" title="Ofertas Online") Ofertas <strong>Online</strong>
+            a.lq-link.lq-link__arrow(href="#" title="" target="_blank") Ver todas
+        .lq-offer__photo(style="background-image: url('images/img-offer-online.png')")
+
+mixin lq-offer-oh()
+    .lq-offer.lq-offer--oh
+        .lq-offer__info
+            a.lq-offer__title(href="#" title="Ofertas Oh!") Ofertas <strong>Oh!</strong>
+            a.lq-link.lq-link__arrow(href="#" title="" target="_blank") Conócelas
+        .lq-offer__photo(style="background-image: url('images/img-offer-oh.png');")
+
+mixin lq-offer-club()
+    .lq-offer.lq-offer--club
+        .lq-offer__info
+            a.lq-offer__title(href="#" title="Ofertas Oh!") Ahora tus compras <strong> te hacen ganar </strong>
+            a.lq-link.lq-link__arrow(href="#" title="" target="_blank") Descúbrelo
+        .lq-offer__photo(style="background-image: url('images/img-offer-club.png');")
+
+mixin lq-input-email()
+    .lq-input-email
+        .lq-input__email
+            input(type="email" placeholder="Ingresa tu correo")
+            button.lq-button.lq-button--email
+                span Enviar
+            span.lq-input__email__warning Correo inválido
+
+mixin lq-promo(type)
+    if type == 'oh'
+        .lq-promo
+            .lq-promo__title
+                h2 Promoción
+                    strong  Tarjeta Oh!
+                .lq-promo__photo(style="background-image: url('images/img-offer-oh.png');")
+            .lq-promo__info
+                ul
+                    li
+                        p Fotos y Descripciones Referenciales.
+                    li
+                        p Promoción válida solo en Plaza Vea online. En Abarrotes y Frescos, compra máxima de 5 unidades y/ kg por cliente. No válido para ventas mayoristas. No acumulable con otras promociones ni precios rebajados con Tarjeta Oh! Stock mínimo disponible 10 unidades y/o kg por producto. Productos sujetos a disponibilidad de stock de nuestras tiendas de despacho. Fotos y descripciones referenciales.
+
+                    li
+                        p Promoción válida hasta el 27-11-2018.
+                a.lq-link.lq-link__arrow(href="#" title="Ver más aquí" target="_blank") Ver más aquí
+    if type == 'online'
+        .lq-promo.isonline
+            .lq-promo__title
+                h2 Promoción
+                    strong  Online
+                .lq-promo__photo(style="background-image: url('images/img-offer-online.png');")
+            .lq-promo__info
+                ul
+                    li
+                        p Fotos y Descripciones Referenciales.
+                    li
+                        p Promoción válida solo en Plaza Vea online. En Abarrotes y Frescos, compra máxima de 5 unidades y/ kg por cliente. No válido para ventas mayoristas. No acumulable con otras promociones ni precios rebajados con Tarjeta Oh! Stock mínimo disponible 10 unidades y/o kg por producto. Productos sujetos a disponibilidad de stock de nuestras tiendas de despacho. Fotos y descripciones referenciales.
+
+                    li
+                        p Promoción válida hasta el 27-11-2018.
+                a.lq-link.lq-link__arrow(href="#" title="Entérate más" target="_blank") Entérate más
+
+mixin lq-table()
+    table.lq-table
+        tr
+            td.isbold Características
+            td Ayuda a regular el sistema digestivo, 1/3 menos calorías, Kosher
+        tr
+            td.isbold Marca
+            td Laive
+        tr
+            td.isbold Sabor
+            td Vainilla francesa
+        tr
+            td.isbold Tipo
+            td Bio defensa
+        tr
+            td.isbold Tipo de contenedor
+            td Manga
+        tr
+            td.isbold Peso del producto ensamblado
+            td 400ml
+        tr
+            td.isbold Dimensiones del producto ensamblado (L x W x H)
+            td 7.40 x 5.28 x 5.47 cm
+        tr
+            td.isbold Cantidad de productos
+            td 4 botellas
+
+mixin lq-category-interest(title, category)
+    a.lq-category-block.lq-category-block--small(class=category href="#" title=title)
+            .lq-category-block__info
+                .lq-category-block__title=title
+
+
+mixin lq-tooltip(text)
+    .lq-tooltip
+        span.lq-tooltip__symbol ?
+        .lq-tooltip__box
+            div
+                p=text
+                .lq-close-button.lq-icon-close
+
+mixin lq-card-recipe(name, time, persons, cost)
+    .lq-card-recipe
+        .lq-card-recipe__imagearea
+        .lq-card-recipe__info
+            h3.lq-card-recipe__title=name
+
+        .lq-card-recipe__bottom
+            .lq-card-recipe__options
+                .lq-card-recipe__time
+                    span.lq-icon-horario
+                    p=time
+                .lq-card-recipe__persons
+                    span.lq-icon-user
+                    p=persons+' per'
+                .lq-card-recipe__cost
+                    span.lq-icon-mondero
+                    if cost == '1'
+                        span.lq-icon-monedas.isred
+                        span.lq-icon-monedas
+                        span.lq-icon-monedas
+                    if cost == '2'
+                        span.lq-icon-monedas.isred
+                        span.lq-icon-monedas.isred
+                        span.lq-icon-monedas
+                    if cost == '3'
+                        span.lq-icon-monedas.isred
+                        span.lq-icon-monedas.isred
+                        span.lq-icon-monedas.isred
+            a(href="#").lq-button.issecondary
+                span VER RECETA

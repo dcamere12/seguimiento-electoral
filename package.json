@@ -1,0 +1,35 @@
+{
+  "name": "seguimiento-electoral",
+  "version": "1.0.0",
+  "description": "Seguimiento electoral",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcamere12/seguimiento-electoral.git"
+  },
+  "author": "Diego Camere",
+  "license": "ISC",
+  "homepage": "https://github.com/dcamere12/seguimiento-electoral",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-babel-minify": "^0.5.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "jest": "^23.6.0",
+    "jquery-1.8": "^1.8.3",
+    "regenerator-runtime": "^0.12.1"
+  }
+}

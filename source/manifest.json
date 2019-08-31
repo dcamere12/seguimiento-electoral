@@ -1,0 +1,36 @@
+{
+    "name": "Plaza Vea",
+    "short_name": "Plaza Vea",
+    "description": "Compra en plazaVea Online y encuentra los mejores precios en Supermercado, Electro, Colchones y más",
+    "start_url": "./?utm_source=homescreen",
+    "display": "standalone",
+    "theme_color": "#BC0D0D",
+    "background_color": "#BC0D0D",
+    "icons": [
+        {
+            "src": "./images/icons/16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
