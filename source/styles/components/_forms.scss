@@ -1,0 +1,57 @@
+.input {
+    position: relative;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3px 6px;
+        border: none;
+        border-bottom: 1px $blue solid;
+
+        &::placeholder {
+            font-family: $font-gilroy;
+            font-weight: $font-medium;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray1;
+        }
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+    &--user {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 16px;
+            width: 16px;
+            background-image: url('../../images/User\ \(2\).svg');
+            background-size: 100%;
+        }
+
+        input {
+            padding: 3px 32px;
+        }
+    }
+
+    &--password {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            height: 16px;
+            width: 16px;
+            background-image: url('../../images/lock.svg');
+            background-size: 100%;
+        }
+
+        input {
+            padding: 3px 32px;
+        }
+    }
+}

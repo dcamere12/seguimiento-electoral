@@ -4,9 +4,99 @@
 
 
 /// define block name
-$block: '.home';
+.home {
+    height: 80vh;
+    width: 100%;
+    padding-top: 10%;
 
-/// declare styles
-#{ $block } {
+    &__left {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        min-height: 400px;
+        float: left;
+        width: calc(50% - 1px);
+        border-right: 1px black solid;
+        box-sizing: border-box;
+        padding-right: 5%;
 
+        p {
+            font-family: $font-gilroy;
+            font-weight: $font-medium;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+    }
+
+    &__right {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        min-height: 400px;
+        float: left;
+        width: 50%;
+        padding-left: 5%;
+    }
+
+    &__form {
+        width: 100%;
+        text-align: center;
+
+        .input {
+            width: 100%;
+            margin-bottom: 16px;
+            margin-bottom: 50px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 16px;
+        }
+
+        &__title {
+            margin: 0 0 34px;
+            font-family: $font-gilroy;
+            font-weight: $font-bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray1;
+        }
+
+        &__google, &__facebook {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+
+        &__facebook {
+            margin-right: 28px;
+        }
+
+        span {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-bold;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+            margin-top: 10px;
+        }
+
+        &__forgot {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-medium;
+            font-size: 12px;
+            line-height: 24px;
+            text-decoration-line: underline;
+            color: $highlight-blue;
+            cursor: pointer;
+        }
+    }
 }
