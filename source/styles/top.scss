@@ -2,6 +2,239 @@
 @import 'mixins/utils';
 @import 'mixins/responsive';
 
-.top {
+body {
+    background-color: $background-gray;
+}
 
+.top {
+    @include clearfix;
+    padding: 0 width-column(1, 26);
+    @include tablet {
+        padding: 0 width-column(1, 31);
+    }
+
+    .demand {
+        &__separator {
+            @include clearfix;
+            border-bottom: 1px $background-gray solid;
+            margin: 0 16px;
+        }
+
+        &__top {
+            @include clearfix;
+            margin-top: 16px;
+            padding: 16px;
+            border-bottom: 1px $background-gray solid;
+
+            &__icon {
+                height: 20px;
+                margin-right: 10px;
+                float: left;
+                width: 10%;
+                background-image:url('../images/top-denuncias.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            &__title {
+                float: left;
+                margin: 0;
+                width: calc(50% -10px);
+                font-family: $font-gilroy;
+                font-weight: $font-bold;
+                font-size: 20px;
+                line-height: 20px;
+                color: $gray1;
+            }
+
+            &__filter {
+                float: right;
+                width: 40%;
+                border: none;
+                color: $gray1;
+                border-bottom: 1px $blue solid;
+                position: relative;
+
+                &::-ms-expand {
+                    display: none;
+                }
+
+            }
+        }
+
+        &__content {
+            padding: 16px;
+            @include clearfix;
+
+            &__title {
+                float: left;
+                font-family: $font-gilroy;
+                font-weight: $font-bold;
+                font-size: 18px;
+                line-height: 24px;
+                color: $gray1;
+                margin: 0;
+            }
+
+            &__date {
+                float: right;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+
+            &__text {
+                clear: both;
+                padding-top: 16px;
+                margin: 0;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+        }
+
+        &__organization {
+            padding: 16px;
+            width: 50%;
+            float: left;
+
+            &__image {
+                height: 67px;
+                width: 67px;
+                background-color: $background-gray;
+                float: left;
+                margin-right: 24px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &__info {
+                float: left;
+                width: 50%;
+            }
+
+            &__name {
+                display: block;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+
+            &__charge {
+                display: block;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+
+            &__place {
+                display: block;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+        }
+
+        &__person {
+            float: right;
+            width: 50%;
+            padding: 16px;
+
+             &__image {
+                height: 67px;
+                width: 67px;
+                background-color: $background-gray;
+                float: left;
+                margin-right: 24px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &__info {
+                float: left;
+                width: 50%;
+            }
+
+            &__name {
+                display: block;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+
+            &__charge {
+                display: block;
+                font-family: $font-gilroy;
+                font-weight: $font-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray1;
+            }
+        }
+
+        &__bottom {
+            padding: 16px;
+            clear: both;
+        }
+
+        &__followers {
+            float: left;
+            padding-bottom: 16px;
+
+            i {
+                display: inline-block;
+                height: 22px;
+                width: 22px;
+                background-image:url('../images/follow.svg');
+                background-repeat: no-repeat;
+                margin-right: 6px;
+                vertical-align: middle;
+            }
+
+            span {
+                display: inline-block;
+                font-family: $font-gilroy;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: $gray1;
+                vertical-align: middle;
+            }
+        }
+
+        &__details {
+            float: right;
+            padding-bottom: 16px;
+
+            a {
+                display: inline-block;
+                font-family: $font-gilroy;
+                font-style: normal;
+                font-weight: $font-bold;
+                font-size: 14px;
+                line-height: 24px;
+                color: $blue;
+                border-bottom: 1px solid $blue;
+            }
+        }
+    }
 }

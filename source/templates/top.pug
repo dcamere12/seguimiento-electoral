@@ -10,9 +10,118 @@ block head
 block content
     .wrap
         .top
-            .layout-left
-            .layout-middle
-            .layout-right
+            .layout-parent
+                .layout.layout-left
+                    .account
+                        img.account__image(src="#", alt="")
+                        span.account__name Juanita Perez
+                        span.account__email juanita-perez@gmail.com
+                    ul.list
+                        li
+                            a(href="#")
+                                i.list__top
+                                span Ver top de denuncias
+                        li
+                            a(href="#")
+                                i.list__all
+                                span Ver todas las denuncias
+                        li
+                            a(href="#")
+                                i.list__new
+                                span Registra tu denuncia aquí
+                        li
+                            a(href="#")
+                                i.list__mine
+                                span Ver mis denuncias
+
+                .layout.layout-middle
+                    .demand
+                        .demand__top
+                            i.demand__top__icon
+                            h2.demand__top__title Top de Denuncias
+                            select.demand__top__filter
+                                option(value="") Filtrar
+                                option(value="all") Todos los partidos políticos
+                                option(value="b") B
+                                option(value="c") C
+                        .demand__separator
+                            .demand__content
+                                h3.demand__content__title Incubrimiento real
+                                span.demand__content__date 10-15-2019
+                                p.demand__content__text Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso. El 2 de abril último, los miembros de Fuerza Popular y el Apra en la Subcomisión de Acusaciones Constitucionales enviaron al archivo la denuncia constitucional contra Pedro Chávarry, presentada por el Frente Amplio, por el caso de la violación de las oficinas lacradas del Ministerio Público. Fueron cuatro votos contra tres.
+
+                            .demand__organization
+                                .demand__organization__image
+                                    img(src="#", alt="")
+                                .demand__organization__info
+                                    span.demand__organization__name APRA
+                                    span.demand__organization__charge Presidente regional
+                                    span.demand__organization__place Lima, Lima
+
+                            .demand__person
+                                .demand__person__image
+                                    img(src="#", alt="")
+                                .demand__person__info
+                                    span.demand__person__charge Presidente regional
+                                    span.demand__person__name Pedro Chávarry
+
+                            .demand__bottom
+                                .demand__followers
+                                    i
+                                    span 1,100 Siguiendo
+                                .demand__details
+                                    a(href="#") Ver detalle
+
+                        .demand__separator
+                            .demand__content
+                                h3.demand__content__title Incubrimiento real
+                                span.demand__content__date 10-15-2019
+                                p.demand__content__text Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso. El 2 de abril último, los miembros de Fuerza Popular y el Apra en la Subcomisión de Acusaciones Constitucionales enviaron al archivo la denuncia constitucional contra Pedro Chávarry, presentada por el Frente Amplio, por el caso de la violación de las oficinas lacradas del Ministerio Público. Fueron cuatro votos contra tres.
+
+                            .demand__organization
+                                .demand__organization__image
+                                    img(src="#", alt="")
+                                .demand__organization__info
+                                    span.demand__organization__name APRA
+                                    span.demand__organization__charge Presidente regional
+                                    span.demand__organization__place Lima, Lima
+
+                            .demand__person
+                                .demand__person__image
+                                    img(src="#", alt="")
+                                .demand__person__info
+                                    span.demand__person__charge Presidente regional
+                                    span.demand__person__name Pedro Chávarry
+
+                            .demand__bottom
+                                .demand__followers
+                                    i
+                                    span 1,100 Siguiendo
+                                .demand__details
+                                    a(href="#") Ver detalle
+
+
+                .layout.layout-right
+                    .follows
+                        .follows__top
+                            h3 Seguimientos
+                        ul.follows__list
+                            li.follows__list__item
+                                a(href="#")
+                                    span.follows__list__item__title Incubrimiento real
+                                    span.follows__list__item__text Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la Repú...
+                                    span.follows__list__item__numbers
+                                        i
+                                        span 1,100
+                            li.follows__list__item
+                                a(href="#")
+                                    span.follows__list__item__title Incubrimiento real
+                                    span.follows__list__item__text Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la Repú...
+                                    span.follows__list__item__numbers
+                                        i
+                                        span 1,100
+
+
 
 block scripts
     //script(src="scripts/home.js")
