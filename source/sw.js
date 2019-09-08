@@ -10,7 +10,7 @@ workbox.precaching.precacheAndRoute([
     { url: './fonts/gilroy-regular-webfont.woff2', revision: '6' },
     { url: './fonts/gilroy-medium-webfont.woff2', revision: '7' },
     { url: './fonts/gilroy-bold-webfont.woff2', revision: '8' },
-    { url: './fonts/iconplazavea.ttf?etmj6f', revision: '9' },
+    { url: './fonts/iconse.ttf?etmj6f', revision: '9' },
     //{ url: 'https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js', revision: '10' },
     { url: './home.html', revision: '11' },
 ]);
