@@ -1,0 +1,138 @@
+@import 'base/variables';
+@import 'mixins/utils';
+@import 'mixins/responsive';
+
+body {
+    background-color: $background-gray;
+}
+
+.mydemands {
+    padding: 0 16px;
+
+    .layout-middle {
+        .list {
+            list-style: none;
+            padding: 0 28px;
+
+            &--approved {
+                .list__item__status {
+                    span {
+                        color: $blue;
+                        padding-left: 28px;
+                    }
+
+                    &::before {
+                        content: '';
+                        height: 16px;
+                        width: 16px;
+                        background-color: $blue;
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            &--inprocess {
+                .list__item__status {
+                    span {
+                        color: $green;
+                        padding-left: 28px;
+                    }
+
+                    &::before {
+                        content: '';
+                        height: 16px;
+                        width: 16px;
+                        background-color: $green;
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            &--unapproved {
+                .list__item__status {
+                    span {
+                        color: $yellow;
+                        padding-left: 28px;
+                    }
+
+                    &::before {
+                        content: '';
+                        height: 16px;
+                        width: 16px;
+                        background-color: $yellow;
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            &__item {
+                @include clearfix;
+                padding: 12px 12px;
+                border-bottom: 1px $gray5 solid;
+
+                &:hover {
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+                    cursor: pointer;
+                }
+
+                &__status {
+                    float: left;
+                    width: width-column(10, 31);
+                    position: relative;
+                    @include onlymobile {
+                        width: 100%;
+                    }
+
+                    span {
+                        display: block;
+                        transform: translateY(4px);
+                        @include onlymobile {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+
+                &__desc {
+                    float: left;
+                    @include onlymobile {
+                        width: 100%;
+                    }
+
+                    span {
+                        font-family: $font-gilroy;
+                        font-weight: $font-bold;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: $gray1;
+                        vertical-align: middle;
+                    }
+                }
+
+                &__date {
+                    float: right;
+                    @include onlymobile {
+                        width: 100%;
+                    }
+
+                    span {
+                        font-family: $font-gilroy;
+                        font-weight: $font-regular;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: $gray1;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

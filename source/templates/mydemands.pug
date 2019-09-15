@@ -1,0 +1,67 @@
+extends layout
+
+block vars
+    - title = "Seguimiento Electoral - Mis demandas";
+    - section = "mydemands";
+
+block head
+    link(rel="stylesheet" href="styles/mydemands.css")
+
+block content
+    .wrap
+        .mydemands
+            .layout-parent
+                include ./partials/account
+
+                .layout.layout-middle.is-full
+                    .layout-middle__top
+                        i.layout-middle__top__icon.icon-zoom
+                        h2.layout-middle__top__title Mis denuncias
+                    ul.list
+                        li.list__item.list--approved
+                            a(href="#")
+                                .list__item__status
+                                    span Aprobado
+                                .list__item__desc
+                                    span Incubrimiento real
+                                .list__item__date
+                                    span 10-15-2019
+                        li.list__item.list--inprocess
+                            a(href="#")
+                                .list__item__status
+                                    span En proceso
+                                .list__item__desc
+                                    span Incubrimiento real
+                                .list__item__date
+                                    span 10-15-2019
+                        li.list__item.list--unapproved
+                            a(href="#")
+                                .list__item__status
+                                    span No procede
+                                .list__item__desc
+                                    span Incubrimiento real
+                                .list__item__date
+                                    span 10-15-2019
+                        li.list__item.list--approved
+                            a(href="#")
+                                .list__item__status
+                                    span Aprobado
+                                .list__item__desc
+                                    span Incubrimiento real
+                                .list__item__date
+                                    span 10-15-2019
+                        li.list__item.list--unapproved
+                            a(href="#")
+                                .list__item__status
+                                    span No procede
+                                .list__item__desc
+                                    span Incubrimiento real
+                                .list__item__date
+                                    span 10-15-2019
+
+
+
+
+
+block scripts
+    //script(src="scripts/home.js")
