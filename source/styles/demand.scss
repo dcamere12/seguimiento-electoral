@@ -7,6 +7,10 @@ body {
 }
 
 .demand {
+    @include onlymobile {
+        padding: 0 width-column(1, 26);
+    }
+
     .form {
         padding: 16px width-column(1, 31);
 
