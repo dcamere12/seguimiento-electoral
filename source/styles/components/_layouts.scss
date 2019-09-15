@@ -149,6 +149,56 @@
             width: 100%;
             margin-right: 0;
         }
+
+        &.is-full {
+            width: width-column(21, 31);
+            margin-right: 0;
+
+            @include onlymobile {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        &__top {
+            @include clearfix;
+            margin-top: 16px;
+            padding: 16px;
+            border-bottom: 1px $background-gray solid;
+
+            &__icon {
+                height: 20px;
+                margin-right: 10px;
+                float: left;
+                width: 10%;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                &.icon-top {
+                    background-image:url('../images/top-denuncias.svg');
+                }
+
+                &.icon-demand {
+                    background-image:url('../images/contrato.svg');
+                }
+            }
+
+            &__title {
+                float: left;
+                margin: 0;
+                width: calc(50% - 10px);
+                font-family: $font-gilroy;
+                font-weight: $font-bold;
+                font-size: 20px;
+                line-height: 20px;
+                color: $gray1;
+            }
+
+            &__filter {
+                float: right;
+                width: 40%;
+            }
+        }
     }
 
     &-right {

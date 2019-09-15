@@ -16,6 +16,14 @@
         border-right: 1px black solid;
         box-sizing: border-box;
         padding-right: 5%;
+        @include onlymobile {
+            width: 100%;
+            border-right: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            display: none;
+        }
+
 
         p {
             font-family: $font-gilroy;
@@ -33,6 +41,11 @@
         float: left;
         width: 50%;
         padding-left: 5%;
+        @include onlymobile {
+            width: 100%;
+            margin-top: 0;
+            padding-top: 0;
+        }
     }
 
     &__form {

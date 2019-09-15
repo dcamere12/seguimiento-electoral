@@ -29,4 +29,27 @@
     .logo {
         transform: translateY(4px);
     }
+
+    .logout {
+        position: absolute;
+        right: 0;
+        top: 6px;
+
+        a {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__control {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 }

@@ -1,0 +1,59 @@
+extends layout
+
+block vars
+    - title = "Seguimiento Electoral";
+    - section = "top";
+
+block head
+    link(rel="stylesheet" href="styles/demand.css")
+
+block content
+    .wrap
+        .demand
+            .layout-parent
+                include ./partials/account
+
+                .layout.layout-middle.is-full
+                    .layout-middle__top
+                        i.layout-middle__top__icon.icon-demand
+                        h2.layout-middle__top__title Registrar denuncia
+                        span.layout-middle__top__text ! Recuerda que tu denuncia se registrará de forma anónima
+                    form.form
+                        .form__row
+                            label(for="title") Título*
+                            .input
+                                input(type="text" id="title" required)
+                        .form__row
+                            label(for="description") Descripción*
+                            textarea.textarea(name="", cols="30", rows="10", id="description" required)
+                        .form__row
+                            .form__row__left
+                                label(for="docfiles") Adjuntar archivos (pdf, word)
+                                .input
+                                    input(type="file" id="docfiles")
+                            .form__row__right
+                                label(for="imagefiles") Adjuntar archivos (pdf, word)
+                                .input
+                                    input(type="file" id="imagefiles")
+
+                        .form__row
+                            .form__row__left
+                                label(for="party") Partido político
+                                    select.select(id="party")
+                                        option(value="") Filtrar
+                                        option(value="all") Todos los partidos políticos
+                                        option(value="b") B
+                                        option(value="c") C
+                            .form__row__right
+                                label(for="candidate") Candidato
+                                    select.select(id="candidate")
+                                        option(value="") Filtrar
+                                        option(value="all") Todos los partidos políticos
+                                        option(value="b") B
+                                        option(value="c") C
+
+                        button.btn Registrar denuncia
+
+
+block scripts
+    //script(src="scripts/home.js")

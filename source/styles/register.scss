@@ -40,6 +40,9 @@ body {
         float: left;
         width: 50%;
         margin-bottom: 52px;
+        @include onlymobile {
+            width: 100%;
+        }
 
         &:first-child {
             display: block;

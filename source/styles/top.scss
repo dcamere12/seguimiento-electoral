@@ -20,48 +20,6 @@ body {
             margin: 0 16px;
         }
 
-        &__top {
-            @include clearfix;
-            margin-top: 16px;
-            padding: 16px;
-            border-bottom: 1px $background-gray solid;
-
-            &__icon {
-                height: 20px;
-                margin-right: 10px;
-                float: left;
-                width: 10%;
-                background-image:url('../images/top-denuncias.svg');
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-            }
-
-            &__title {
-                float: left;
-                margin: 0;
-                width: calc(50% -10px);
-                font-family: $font-gilroy;
-                font-weight: $font-bold;
-                font-size: 20px;
-                line-height: 20px;
-                color: $gray1;
-            }
-
-            &__filter {
-                float: right;
-                width: 40%;
-                border: none;
-                color: $gray1;
-                border-bottom: 1px $blue solid;
-                position: relative;
-
-                &::-ms-expand {
-                    display: none;
-                }
-
-            }
-        }
-
         &__content {
             padding: 16px;
             @include clearfix;

@@ -56,3 +56,28 @@
         }
     }
 }
+
+.textarea {
+    resize: none;
+    outline: none;
+    font-family: $font-gilroy;
+    font-weight: $font-regular;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray1;
+    border: none;
+    border-bottom: 1px $blue solid;
+    width: 100%;
+}
+
+.select {
+    width: 100%;
+    border: none;
+    color: $gray1;
+    border-bottom: 1px $blue solid;
+    position: relative;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
