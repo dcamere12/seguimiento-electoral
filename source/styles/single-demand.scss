@@ -1,0 +1,214 @@
+@import 'base/variables';
+@import 'mixins/utils';
+@import 'mixins/responsive';
+
+body {
+    background-color: $background-gray;
+}
+
+.single-demand {
+    &__main {
+        padding: 16px 0;
+    }
+
+    &__title {
+        padding: 0 16px;
+    }
+
+    &__organization {
+        padding: 16px;
+        width: 50%;
+        float: left;
+
+        &__image {
+            height: 67px;
+            width: 67px;
+            background-color: $background-gray;
+            float: left;
+            margin-right: 24px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &__info {
+            float: left;
+            width: 50%;
+        }
+
+        &__name {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+
+        &__charge {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+
+        &__place {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+    }
+
+    &__person {
+        float: right;
+        width: 50%;
+        padding: 16px;
+
+         &__image {
+            height: 67px;
+            width: 67px;
+            background-color: $background-gray;
+            float: left;
+            margin-right: 24px;
+            border-radius: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &__info {
+            float: left;
+            width: 50%;
+        }
+
+        &__name {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+
+        &__charge {
+            display: block;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+        }
+    }
+
+    &__text {
+        clear: both;
+        padding: 0 16px;
+    }
+
+    &__status {
+        padding-left: 40px;
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            left: 16px;
+            top: 0;
+            border-radius: 100%;
+        }
+
+        &--approved {
+            color: $blue;
+
+            &::before {
+                background-color: $blue;
+            }
+        }
+
+        &--unapproved {
+            color: $yellow;
+
+            &::before {
+                background-color: $yellow;
+            }
+        }
+
+        &--inprocess {
+            color: $green;
+
+            &::before {
+                background-color: $green;
+            }
+        }
+    }
+
+    &__attachments {
+        span {
+            padding-left: 16px;
+            font-family: $font-gilroy;
+            font-weight: $font-bold;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+            margin-right: 10%;
+        }
+
+        a {
+            margin-right: 10%;
+            font-family: $font-gilroy;
+            font-weight: $font-regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: $blue;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &__answer {
+        @include clearfix;
+        margin-top: 16px;
+
+        &__left {
+            float: left;
+            width: 20%;
+        }
+
+        &__right {
+            float: left;
+            width: 80%;
+        }
+
+        span {
+            padding-left: 16px;
+            font-family: $font-gilroy;
+            font-weight: $font-bold;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray1;
+            float: left;
+            margin-right: 10%;
+        }
+
+        p {
+            margin: 0;
+            padding-right: 16px;
+        }
+    }
+}
