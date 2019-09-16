@@ -162,6 +162,11 @@ body {
             line-height: 24px;
             color: $gray1;
             margin-right: 10%;
+            @include onlymobile {
+                width: 100%;
+                display: block;
+                margin-right: 0;
+            }
         }
 
         a {
@@ -173,6 +178,10 @@ body {
             color: $blue;
             text-decoration: underline;
             cursor: pointer;
+            @include onlymobile {
+                width: 100%;
+                padding-left: 16px;
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -188,11 +197,19 @@ body {
         &__left {
             float: left;
             width: 20%;
+            @include onlymobile {
+                width: 100%;
+            }
         }
 
         &__right {
             float: left;
             width: 80%;
+            @include onlymobile {
+                width: 100%;
+                margin-bottom: 16px;
+                padding: 0 16px;
+            }
         }
 
         span {
@@ -204,11 +221,19 @@ body {
             color: $gray1;
             float: left;
             margin-right: 10%;
+            @include onlymobile {
+                width: 100%;
+                margin-bottom: 16px;
+            }
         }
 
         p {
             margin: 0;
             padding-right: 16px;
+            @include onlymobile {
+                width: 100%;
+                margin-bottom: 16px;
+            }
         }
     }
 }
