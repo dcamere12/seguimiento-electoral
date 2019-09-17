@@ -7,6 +7,8 @@ body {
 }
 
 .single-demand {
+    padding: 0 width-column(1, 26);
+
     &__main {
         padding: 16px 0;
     }
