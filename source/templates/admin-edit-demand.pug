@@ -1,0 +1,60 @@
+extends layout
+
+block vars
+    - title = "Seguimiento Electoral";
+    - section = "Denuncia";
+
+block head
+    link(rel="stylesheet" href="styles/single-demand.css")
+
+block content
+    .wrap
+        .single-demand
+            .layout-parent
+                include ./partials/account-admin
+
+                .layout.layout-middle.is-full
+                    .layout-middle__top
+                        i.layout-middle__top__icon.icon-zoom
+                        h2.layout-middle__top__title Mis denuncias
+
+                    .single-demand__main.single-demand__main--admin
+                        span.single-demand__status.single-demand__status--approved Aprobado
+                        h3.single-demand__title Incubrimiento real
+                        .single-demand__organization
+                            .single-demand__organization__image
+                                img(src="#", alt="")
+                            .single-demand__organization__info
+                                span.single-demand__organization__name APRA
+                                span.single-demand__organization__charge Presidente regional
+                                span.single-demand__organization__place Lima, Lima
+                        .single-demand__person
+                            .single-demand__person__image
+                                img(src="#", alt="")
+                            .single-demand__person__info
+                                span.single-demand__person__charge Presidente regional
+                                span.single-demand__person__name Pedro Chávarry
+                        .single-demand__text
+                            p Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso. El 2 de abril último, los miembros de Fuerza Popular y el Apra en la Subcomisión de Acusaciones Constitucionales enviaron al archivo la denuncia constitucional contra Pedro Chávarry, presentada por el Frente Amplio, por el caso de la violación de las oficinas lacradas del Ministerio Público. Fueron cuatro votos contra tres, presentada por el Frente Amplio, por el caso . Esta denuncia constitucional deberá seguir un largo camino en el Congreso de la República. Pero no es la primera acusación que se presenta sobre el mismo caso. El 2 de abril último, los miembros de Fuerza Popular y el Apra en la Subcomisión de Acusaciones Constitucionales enviaron al archivo la denuncia constitucional contra Pedro Chávarry, presentada por el Frente Amplio..
+                        .single-demand__attachments
+                            span Adjuntos:
+                            a(href="") caso-cuellos.pdf
+                            a(href="") caso-cuellos.png
+                    .single-demand__admin
+                        .single-demand__item
+                            .single-demand__item__left
+                                span Estado:
+                            .single-demand__item__right
+                                select.select(id="status")
+                                    option(value="approved") Aprobado
+                                    option(value="inprocess") En proceso
+                                    option(value="unapproved") No procede
+                        .single-demand__item
+                            .single-demand__item__left
+                                span Respuesta:
+                            .single-demand__item__right
+                                textarea.textarea(name="", cols="30", rows="5", id="description" required) Aprobado porque el Apra en la Subcomisión de Acusaciones Constitucionales enviaron al archivo la denuncia constitucional contra Pedro Chávarry, presentada por el Frente Amplio.
+                        button.btn.single-demand__btn Guardar
+
+block scripts
+    //script(src="scripts/home.js")

@@ -10,17 +10,18 @@ body {
     padding: 0 width-column(1, 26);
 
     &__main {
-        padding: 16px 0;
-    }
+        padding: 32px 0;
 
-    &__title {
-        padding: 0 16px;
+        &--admin {
+            border-bottom: 1px $gray5 solid;
+            margin: 0 32px;
+        }
     }
 
     &__organization {
-        padding: 16px;
         width: 50%;
         float: left;
+        margin-bottom: 16px;
 
         &__image {
             height: 67px;
@@ -71,7 +72,7 @@ body {
     &__person {
         float: right;
         width: 50%;
-        padding: 16px;
+        margin-bottom: 16px;
 
          &__image {
             height: 67px;
@@ -113,11 +114,11 @@ body {
 
     &__text {
         clear: both;
-        padding: 0 16px;
+
     }
 
     &__status {
-        padding-left: 40px;
+        padding-left: 23px;
         position: relative;
 
         &::before {
@@ -125,7 +126,7 @@ body {
             height: 16px;
             width: 16px;
             position: absolute;
-            left: 16px;
+            left: 0;
             top: 0;
             border-radius: 100%;
         }
@@ -157,7 +158,6 @@ body {
 
     &__attachments {
         span {
-            padding-left: 16px;
             font-family: $font-gilroy;
             font-weight: $font-bold;
             font-size: 14px;
@@ -182,7 +182,6 @@ body {
             cursor: pointer;
             @include onlymobile {
                 width: 100%;
-                padding-left: 16px;
             }
 
             &:last-child {
@@ -192,9 +191,14 @@ body {
 
     }
 
-    &__answer {
+    &__admin {
+        padding: 16px 0;
+    }
+
+    &__item {
         @include clearfix;
         margin-top: 16px;
+        margin: 0 32px 20px;
 
         &__left {
             float: left;
@@ -210,12 +214,11 @@ body {
             @include onlymobile {
                 width: 100%;
                 margin-bottom: 16px;
-                padding: 0 16px;
+
             }
         }
 
         span {
-            padding-left: 16px;
             font-family: $font-gilroy;
             font-weight: $font-bold;
             font-size: 14px;
@@ -237,5 +240,10 @@ body {
                 margin-bottom: 16px;
             }
         }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
     }
 }
