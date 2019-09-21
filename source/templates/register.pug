@@ -17,24 +17,32 @@ block content
                         label(for="dni") DNI
                         .input
                             input(type="text" id="dni" maxlength="8")
+                    .form__row.form__row--half
+                        label(for="dnidate") Fecha de emisión
+                        .input
+                            input(type="date" id="dnidate")
 
-                        button.btn.btn--search Buscar
+                        button.btn.btn--search Validar
                     .form__row
                         label(for="nombres") Nombres
                         .input
-                            input(type="text" id="nombres")
+                            input(type="text" id="nombres" disabled)
                     .form__row
                         label(for="apellidos") Apellidos
                         .input
-                            input(type="text" id="apellidos")
+                            input(type="text" id="apellidos" disabled)
+                    .form__row.form__row--full
+                        label(for="address") Dirección
+                        .input
+                            input(type="text" id="address" disabled)
                     .form__row
                         label(for="correo") Correo
                         .input
                             input(type="email" id="correo")
                     .form__row
-                        label(for="domicilio") Domicilio
+                        label(for="password") Contraseña
                         .input
-                            input(type="text" id="domicilio")
+                            input(type="password" id="password")
                 button.btn Siguiente
 
 

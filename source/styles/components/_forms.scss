@@ -1,5 +1,6 @@
 .input {
     position: relative;
+    box-sizing: border-box;
 
     input {
         width: 100%;
@@ -19,6 +20,10 @@
 
         &:active, &:focus {
             outline: none;
+        }
+
+        &:disabled {
+            background-color: $gray5;
         }
     }
 
