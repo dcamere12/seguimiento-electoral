@@ -28,7 +28,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
-    "jest": "^23.6.0",
+    "jest": "^29.3.1",
     "jquery-1.8": "^1.8.3",
     "regenerator-runtime": "^0.12.1"
   }
